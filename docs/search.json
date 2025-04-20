@@ -1,0 +1,96 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Applied Machine Learning for Tabular Data",
+    "section": "",
+    "text": "Preface\nTo run this reprex, you should only need:\npak::pak(\n  c(\"glue\", \"gt\", \"gtExtras\", \"knitr\", \"patchwork\", \"scales\", \"sessioninfo\",\n    \"tidymodels\")\n)",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#computing-notes",
+    "href": "index.html#computing-notes",
+    "title": "Applied Machine Learning for Tabular Data",
+    "section": "Computing Notes",
+    "text": "Computing Notes\nQuarto was used to compile and render the materials\n\nQuarto 1.7.27\n[✓] Checking environment information...\n[✓] Checking versions of quarto binary dependencies...\n      Pandoc version 3.6.3: OK\n      Dart Sass version 1.85.1: OK\n      Deno version 1.46.3: OK\n      Typst version 0.13.0: OK\n[✓] Checking versions of quarto dependencies......OK\n[✓] Checking Quarto installation......OK\n      Version: 1.7.27\n[✓] Checking tools....................OK\n      TinyTeX: (external install)\n      Chromium: (not installed)\n[✓] Checking LaTeX....................OK\n      Using: TinyTex\n      Version: 2024\n[✓] Checking Chrome Headless....................OK\n      Using: Chrome found on system\n      Source: MacOS known location\n[✓] Checking basic markdown render....OK\n[✓] Checking Python 3 installation....OK\n      Version: 3.9.18\n      Jupyter: (None)\n      Jupyter is not available in this Python installation.\n[✓] Checking R installation...........OK\n      Version: 4.4.2\n      LibPaths:\n        - /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library\n      knitr: 1.49\n      rmarkdown: 2.27\n[✓] Checking Knitr engine render......OK\n\nR version 4.4.2 (2024-10-31) was used for the majority of the computations. torch 2.5.1 was also used. The versions of the primary R modeling and visualization packages used here are:\n\n\n\n\n\n\n\n\n\naorsf (0.1.5)\napplicable (0.1.1)\naspline (0.2.0)\n\n\nbaguette (1.1.0)\nbestNormalize (1.9.1)\nbibtex (0.5.1)\n\n\nbonsai (0.3.2)\nbroom (1.0.8)\nbroom.mixed (0.2.9.5)\n\n\nbrulee (0.4.0.9000)\nbslib (0.7.0)\nC50 (0.1.8)\n\n\ncolino (0.0.1)\nCubist (0.4.4)\nDALEXtra (2.3.0)\n\n\ndbarts (0.9-30)\nddalpha (1.3.15)\ndesirability2 (0.0.1)\n\n\ndials (1.4.0)\ndimRed (0.2.6)\ndiscrim (1.0.1)\n\n\ndoMC (1.3.8)\ndplyr (1.1.4.9000)\ne1071 (1.7-14)\n\n\nearth (5.3.4)\nembed (1.1.5)\nemmeans (1.11.0)\n\n\nfastICA (1.2-5.1)\nfinetune (1.2.0)\nforested (0.1.0)\n\n\nGA (3.2.4)\ngganimate (1.0.9)\nggforce (0.4.2)\n\n\nggiraph (0.8.9)\nggplot2 (3.5.2)\nglmnet (4.1-8)\n\n\ngt (0.10.1)\nhardhat (1.4.1)\nheatmaply (1.5.0)\n\n\nhstats (1.2.2)\nipred (0.9-15)\nirlba (2.3.5.1)\n\n\njanitor (2.2.0)\nkernlab (0.9-33)\nkknn (1.3.1)\n\n\nklaR (1.7-3)\nleaflet (2.2.2)\nlightgbm (4.5.0)\n\n\nlme4 (1.1-35.5)\nMatrix (1.7-1)\nmda (0.5-5)\n\n\nmeasure (0.0.1.9000)\nmgcv (1.9-1)\nmixdir (0.3.0)\n\n\nmixOmics (6.31.4)\nmodeldata (1.4.0)\nmodeldatatoo (0.3.0)\n\n\nnaniar (1.1.0)\npamr (1.56.2)\nparsnip (1.3.1)\n\n\npartykit (1.2-22)\npatchwork (1.3.0)\nplsmod (1.0.0.9000)\n\n\nprobably (1.0.3)\npROC (1.18.5)\npurrr (1.0.4.9000)\n\n\nragg (1.3.1)\nranger (0.17.0)\nrecipes (1.3.0)\n\n\nrpart (4.1.24)\nrsample (1.3.0)\nRSpectra (0.16-2)\n\n\nrstudioapi (0.17.1)\nrules (1.0.2)\nsf (1.0-20)\n\n\nsfd (0.1.0)\nshinylive (0.1.1)\nsparsediscrim (0.3.0)\n\n\nsparseLDA (0.1-9)\nsparsevctrs (0.3.3)\nspatialsample (0.6.0)\n\n\nsplines2 (0.5.3)\nstacks (1.0.5)\nstopwords (2.3)\n\n\ntextrecipes (1.1.0)\nthemis (1.0.3)\ntidymodels (1.2.0)\n\n\ntidyposterior (1.0.1)\ntidyr (1.3.1.9000)\ntidysdm (0.9.5)\n\n\ntorch (0.14.2)\ntune (1.3.0)\nusethis (2.2.3)\n\n\nuwot (0.2.2)\nVBsparsePCA (0.1.0)\nviridis (0.6.5)\n\n\nworkflows (1.2.0)\nworkflowsets (1.1.0)\nxgboost (1.7.8.1)\n\n\nxrf (0.2.2)\nyardstick (1.3.2)",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#chapter-references",
+    "href": "index.html#chapter-references",
+    "title": "Applied Machine Learning for Tabular Data",
+    "section": "Chapter References",
+    "text": "Chapter References",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "chapters/news.html",
+    "href": "chapters/news.html",
+    "title": "News",
+    "section": "",
+    "text": "Errata\nNo reported edits (yet).",
+    "crumbs": [
+      "News"
+    ]
+  },
+  {
+    "objectID": "chapters/news.html#changelog",
+    "href": "chapters/news.html#changelog",
+    "title": "News",
+    "section": "Changelog",
+    "text": "Changelog\n\n2024-10-01\nEnabled google analytics.\n\n\n2024-09-23\nChapter 4 is now on missing data, bumping subsequent chapter numbers.\nNew chapters on resampling and grid search are now online.\n\n\n2024-06-17\nSeveral new chapters on embeddings, splines/interactions/discretization, and overfitting. Also, shinylive is used for interactive visualizations of concepts.\n\n\n2024-01-02\nFixed various typos.\n\n\n2023-12-21\nTypo fix on main page.\n\n\n2023-12-19\nSmall updates.\nUpdated snapshot.\nThe background color of premade outputs has been changed to the pages background color (#16).\n\n\n2023-12-11\nNo new content.\nUpdated snapshot.\nIncludes new Google Scholar links for articles (#8)\n\n\n2023-11-17\nUpdated renv snapshot.\n\n\n2023-10-09\nFirst committed versions.",
+    "crumbs": [
+      "News"
+    ]
+  },
+  {
+    "objectID": "chapters/introduction.html",
+    "href": "chapters/introduction.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "1.1 A Table\nMachine learning (ML) models are mathematical equations that take inputs, called predictors, and try to estimate some future output value. The output, often called an outcome or target, can be numbers, categories, or other types of values.\nFor example, in the next chapter, we try to predict how long it takes to deliver food ordered from a restaurant. The outcome is the time from the initial order (in minutes). There are multiple predictors, including: the distance from the restaurant to the delivery location, the date/time of the order, and which items were included in the order. These data are tabular; they can be arranged in a table-like way (such as a spreadsheet or database table) where variables are arranged in columns and individual data points (i.e., instances of food orders) in rows, as shown in Table 1.21.\nNote that the predictor values are almost always known. For future data, the outcome is not; it is a machine learning model’s job to predict unknown outcome values.\nTODO: In Figure 1.1, we get a “(a)” between the image and the caption.\nTODO The next figure, , is included images and another “(a)” and produces a warning in the terminal:\nTODO We should think about about doing more than a warning when a traditional chunk is used in a book with renderings: [light, dark] and without fenced chunks.\nHere’s an example that appears to work but when you switch to dark mode, the figure number changes.\nTODO A few issues with Table 1.1 below:\nI just put the next table to see if we get the reference number changing when you go between light/dark (it did not for me).\nTime to Delivery\nHour of Order\nDay of Order\nDistance\nItem Counts\n\n\n1\n2\n...\n27\n\n\n\n\n15.26\n11.9\nThu\n2.82\n0\n0\n...\n0\n\n\n27.45\n19.2\nWed\n3.59\n0\n0\n...\n1\n\n\n25.50\n14.9\nThu\n2.28\n2\n0\n...\n0\n\n\n17.34\n12.2\nWed\n3.26\n0\n0\n...\n0\n\n\n13.58\n11.5\nFri\n2.15\n2\n0\n...\n0\n\n\n25.55\n15.4\nSat\n2.17\n0\n0\n...\n0\n\n\n19.86\n13.2\nTue\n2.67\n0\n0\n...\n0\n\n\n28.25\n15.7\nSun\n4.24\n1\n0\n...\n1\n\n\n\n\n\n\n\n\n\n\n\n\n\nTime to Delivery\nHour of Order\nDay of Order\nDistance\nItem Counts\n\n\n1\n2\n...\n27\n\n\n\n\n15.26\n11.9\nThu\n2.82\n0\n0\n...\n0\n\n\n27.45\n19.2\nWed\n3.59\n0\n0\n...\n1\n\n\n25.50\n14.9\nThu\n2.28\n2\n0\n...\n0\n\n\n17.34\n12.2\nWed\n3.26\n0\n0\n...\n0\n\n\n13.58\n11.5\nFri\n2.15\n2\n0\n...\n0\n\n\n25.55\n15.4\nSat\n2.17\n0\n0\n...\n0\n\n\n19.86\n13.2\nTue\n2.67\n0\n0\n...\n0\n\n\n28.25\n15.7\nSun\n4.24\n1\n0\n...\n1\n\n\n\n\n\n\n\n\nTable 1.2: A random selection of several rows from a tabular data set on food delivery times.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/introduction.html#a-table",
+    "href": "chapters/introduction.html#a-table",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "Another “(a)”\nBoth tables show up\ngt_theme_dark() capitalizes columns ¯\\(ツ)/¯\nAlso, why are figure captions left aligned but tables are right aligned.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nID\nEccentricity\n\nArea\n\nIntensity\n\n\nNucleus\nCell\nNucleus\nCell\nNucleus\nCell\n\n\n\n\n17\n0.494\n0.836\n\n3,352\n11,699\n\n0.274\n0.155\n\n\n18\n0.708\n0.550\n\n1,777\n4,980\n\n0.278\n0.210\n\n\n21\n0.495\n0.802\n\n1,274\n3,081\n\n0.326\n0.218\n\n\n22\n0.809\n0.975\n\n1,169\n3,933\n\n0.583\n0.229\n\n\n\n\n\n\n\n\n\n\n\n\n\nID\nEccentricity\n\nArea\n\nIntensity\n\n\nNucleus\nCell\nNucleus\nCell\nNucleus\nCell\n\n\n\n\n17\n0.494\n0.836\n\n3,352\n11,699\n\n0.274\n0.155\n\n\n18\n0.708\n0.550\n\n1,777\n4,980\n\n0.278\n0.210\n\n\n21\n0.495\n0.802\n\n1,274\n3,081\n\n0.326\n0.218\n\n\n22\n0.809\n0.975\n\n1,169\n3,933\n\n0.583\n0.229\n\n\n\n\n\n\n\n\n(a)\n\n\n\n\n\n\n\n\n\n\nTable 1.1: Cells, such as those found in a previous figure, translated into a tabular format using three features for the nuclear and non-nuclear regions of the segmented cells.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/introduction.html#chapter-references",
+    "href": "chapters/introduction.html#chapter-references",
+    "title": "1  Introduction",
+    "section": "Chapter References",
+    "text": "Chapter References\n\n\n\n\nSimonyan, K, and A Zisserman. 2014. “Very Deep Convolutional Networks for Large-Scale Image Recognition.” arXiv.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/introduction.html#footnotes",
+    "href": "chapters/introduction.html#footnotes",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "Non-tabular data are later in this chapter.↩︎",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  }
+]
