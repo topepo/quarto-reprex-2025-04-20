@@ -74,7 +74,6 @@ TODO: In @fig-delivery-hist, we get a "(a)" between the image and the caption.
 ::: {.figure-content}
 
 ```{r}
-#| label: fig-delivery-hist
 #| renderings: [light, dark]
 #| fig-width: 9
 #| fig-height: 4.25
@@ -137,7 +136,6 @@ TODO The next figure, , is included images and another "(a)" and produces a warn
 ::: {.figure-content}
 
 ```{r}
-#| label: fig-model-building-process
 #| echo: false
 #| renderings: [light, dark]
 #| out-width: 60%
@@ -157,20 +155,21 @@ TODO We should think about about doing more than a warning when a traditional ch
 
 Here's an example that _appears_ to work but when you switch to dark mode, the figure number changes. 
 
+::: {#fig-vgg16}
 
 ```{r}
-#| label: fig-vgg16
 #| echo: false
 #| renderings: [light, dark]
 #| out-width: "100%"
 #| fig-align: "center"
-#| fig-cap: A simplified version of the convolutional neural network deep learning model proposed by @simonyan2014very. This version only includes a single dense layer (instead of four).
-
 knitr::include_graphics("../premade/vgg16.jpg")
 
 knitr::include_graphics("../premade/vgg16_dark.png")
 ```
 
+A simplified version of the convolutional neural network deep learning model proposed by @simonyan2014very. This version only includes a single dense layer (instead of four).
+
+:::
 
 
 
@@ -194,7 +193,6 @@ TODO A few issues with @tbl-cells below:
 ::: {.column width="70%"}
 
 ```{r}
-#| label: tbl-cells
 #| renderings: [light, dark]
 
 cell_data <- 
@@ -240,10 +238,10 @@ Cells, such as those found in a previous figure, translated into a tabular forma
 
 I just put the next table to see if we get the reference number changing when you go between light/dark (it did not for me). 
 
+::: {#tbl-deliveries)
+
 ```{r}
-#| label: tbl-deliveries
 #| renderings: [light, dark]
-#| tbl-cap: "A random selection of several rows from a tabular data set on food delivery times."
 
 example_dbl <- 
   delivery_tbl %>% 
@@ -266,6 +264,9 @@ example_dbl
 example_dbl |> gt_theme_dark()
 ```
 
+A random selection of several rows from a tabular data set on food delivery times.
+
+:::
 
 
 ## Chapter References {.unnumbered}
