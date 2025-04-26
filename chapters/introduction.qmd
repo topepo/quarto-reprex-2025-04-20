@@ -74,6 +74,7 @@ TODO: In @fig-delivery-hist, we get a "(a)" between the image and the caption.
 ::: {.figure-content}
 
 ```{r}
+#| label: delivery-hist
 #| renderings: [light, dark]
 #| fig-width: 9
 #| fig-height: 4.25
@@ -136,6 +137,7 @@ TODO The next figure, , is included images and another "(a)" and produces a warn
 ::: {.figure-content}
 
 ```{r}
+#| label: model-building-process
 #| echo: false
 #| renderings: [light, dark]
 #| out-width: 60%
@@ -158,6 +160,7 @@ Here's an example that _appears_ to work but when you switch to dark mode, the f
 ::: {#fig-vgg16}
 
 ```{r}
+#| label: vgg16
 #| echo: false
 #| renderings: [light, dark]
 #| out-width: "100%"
@@ -193,6 +196,7 @@ TODO A few issues with @tbl-cells below:
 ::: {.column width="70%"}
 
 ```{r}
+#| label: cells
 #| renderings: [light, dark]
 
 cell_data <- 
@@ -241,6 +245,7 @@ I just put the next table to see if we get the reference number changing when yo
 ::: {#tbl-deliveries)
 
 ```{r}
+#| label: deliveries
 #| renderings: [light, dark]
 
 example_dbl <- 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.27">
+<meta name="generator" content="quarto-99.9.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -57,9 +57,9 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-985aa47af68dae11cd4d235c71fb941e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6c49c5477b92c77c9eb341f9299c235f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-985aa47af68dae11cd4d235c71fb941e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-3aa970819e70fbc78806154e5a1fcd28.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-be2dad9397c9b99732ed2a04f2c65f62.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-3aa970819e70fbc78806154e5a1fcd28.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-ac94f01b84e0cf733daf4ed4b084c36a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -225,7 +225,7 @@ gtag('config', 'G-7T996NL20Z', { 'anonymize_ip': true});
       const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
       const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
       let newTheme = '';
-      if(darkModeDefault) {
+      if(authorPrefersDark) {
         newTheme = isAlternate ? baseTheme : alternateTheme;
       } else {
         newTheme = isAlternate ? alternateTheme : baseTheme;
@@ -249,6 +249,7 @@ gtag('config', 'G-7T996NL20Z', { 'anonymize_ip': true});
       }
     };
     const darkModeDefault = false;
+    const authorPrefersDark = false;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -400,7 +401,7 @@ gtag('config', 'G-7T996NL20Z', { 'anonymize_ip': true});
 
 
 <p>Machine learning (ML) models are mathematical equations that take inputs, called <em>predictors</em>, and try to estimate some future output value. The output, often called an <em>outcome</em> or <em>target</em>, can be numbers, categories, or other types of values.</p>
-<p>For example, in the next chapter, we try to predict how long it takes to deliver food ordered from a restaurant. The outcome is the time from the initial order (in minutes). There are multiple predictors, including: the distance from the restaurant to the delivery location, the date/time of the order, and which items were included in the order. These data are <em>tabular</em>; they can be arranged in a table-like way (such as a spreadsheet or database table) where variables are arranged in columns and individual data points (i.e., instances of food orders) in rows, as shown in <a href="#tbl-deliveries" class="quarto-xref">Table&nbsp;<span>1.2</span></a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>For example, in the next chapter, we try to predict how long it takes to deliver food ordered from a restaurant. The outcome is the time from the initial order (in minutes). There are multiple predictors, including: the distance from the restaurant to the delivery location, the date/time of the order, and which items were included in the order. These data are <em>tabular</em>; they can be arranged in a table-like way (such as a spreadsheet or database table) where variables are arranged in columns and individual data points (i.e., instances of food orders) in rows, as shown in <span class="quarto-unresolved-ref">?tbl-deliveries</span><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 <p>Note that the predictor values are almost always known. For future data, the outcome is not; it is a machine learning model’s job to predict unknown outcome values.</p>
 <p>TODO: In <a href="#fig-delivery-hist" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>, we get a “(a)” between the image and the caption.</p>
 <div id="fig-delivery-hist" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -409,26 +410,16 @@ gtag('config', 'G-7T996NL20Z', { 'anonymize_ip': true});
 <div class="figure-content">
 <div class="cell" data-layout-align="center" data-renderings="[&quot;light&quot;,&quot;dark&quot;]">
 <div class="light-content">
-<div id="fig-delivery-hist-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="80%">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-delivery-hist-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../figures/fig-delivery-hist-1.svg" id="fig-delivery-hist-1" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:80.0%" data-ref-parent="fig-delivery-hist">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-delivery-hist-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a)
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/delivery-hist-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
 </div>
 <div class="dark-content">
-<div id="fig-delivery-hist-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="80%">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-delivery-hist-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../figures/fig-delivery-hist-2.svg" id="fig-delivery-hist-2" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:80.0%" data-ref-parent="fig-delivery-hist">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-delivery-hist-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b)
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/delivery-hist-2.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
 </div>
@@ -447,26 +438,16 @@ Figure&nbsp;1.1: Histrograms of the training set outcome data with and without a
 <div class="figure-content">
 <div class="cell" data-layout-align="center" data-renderings="[&quot;light&quot;,&quot;dark&quot;]">
 <div class="light-content">
-<div id="fig-model-building-process-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="60%">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-model-building-process-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../premade/overall_process_validation.svg" id="fig-model-building-process-1" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%" data-ref-parent="fig-model-building-process">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-model-building-process-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a)
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../premade/overall_process_validation.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
 </figure>
 </div>
 </div>
 <div class="dark-content">
-<div id="fig-model-building-process-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="60%">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-model-building-process-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../premade/overall_process_validation_dark.svg" id="fig-model-building-process-2" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%" data-ref-parent="fig-model-building-process">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-model-building-process-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b)
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../premade/overall_process_validation_dark.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
 </figure>
 </div>
 </div>
@@ -480,31 +461,30 @@ Figure&nbsp;1.2: A general high level view of the process of creating a predicti
 </div>
 <p>TODO We should think about about doing more than a warning when a traditional chunk is used in a book with <code>renderings: [light, dark]</code> and without fenced chunks.</p>
 <p>Here’s an example that <em>appears</em> to work but when you switch to dark mode, the figure number changes.</p>
+<div id="fig-vgg16" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vgg16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell" data-layout-align="center" data-renderings="[&quot;light&quot;,&quot;dark&quot;]">
 <div class="light-content">
-<div id="fig-vgg16-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-vgg16-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../premade/vgg16.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vgg16-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.3: A simplified version of the convolutional neural network deep learning model proposed by <span class="citation" data-cites="simonyan2014very">Simonyan and Zisserman (<a href="#ref-simonyan2014very" role="doc-biblioref">2014</a>)</span>. This version only includes a single dense layer (instead of four).
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../premade/vgg16.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 <div class="dark-content">
-<div id="fig-vgg16-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-vgg16-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../premade/vgg16_dark.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vgg16-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.4: A simplified version of the convolutional neural network deep learning model proposed by <span class="citation" data-cites="simonyan2014very">Simonyan and Zisserman (<a href="#ref-simonyan2014very" role="doc-biblioref">2014</a>)</span>. This version only includes a single dense layer (instead of four).
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../premade/vgg16_dark.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vgg16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.3: A simplified version of the convolutional neural network deep learning model proposed by <span class="citation" data-cites="simonyan2014very">Simonyan and Zisserman (<a href="#ref-simonyan2014very" role="doc-biblioref">2014</a>)</span>. This version only includes a single dense layer (instead of four).
+</figcaption>
+</figure>
 </div>
 <section id="a-table" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="a-table"><span class="header-section-number">1.1</span> A Table</h2>
@@ -523,10 +503,7 @@ Figure&nbsp;1.4: A simplified version of the convolutional neural network deep l
 
 </div><div class="column" style="width:70%;">
 <div class="cell" data-layout-align="center" data-renderings="[&quot;light&quot;,&quot;dark&quot;]">
-<div id="tbl-cells" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-renderings="[&quot;light&quot;,&quot;dark&quot;]" data-layout-align="center">
-<figure class="quarto-float quarto-subfloat-tbl figure">
-<div aria-describedby="tbl-cells-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output-display">
+<div class="light-content">
 <div id="mrhhizflez" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#mrhhizflez table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -966,25 +943,51 @@ Figure&nbsp;1.4: A simplified version of the convolutional neural network deep l
 #mrhhizflez .gt_indent_5 {
   text-indent: 25px;
 }
+
+#mrhhizflez .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#mrhhizflez div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
 </style>
 
-<table class="gt_table do-not-create-environment table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
 <thead>
 <tr class="gt_col_headings gt_spanner_row header">
 <th rowspan="2" id="ID" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ID</th>
-<th colspan="2" id="Eccentricity" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">Eccentricity</span></th>
-<th rowspan="2" id=" " class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col"></th>
-<th colspan="2" id="Area" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">Area</span></th>
-<th rowspan="2" id=" " class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col"></th>
-<th colspan="2" id="Intensity" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">Intensity</span></th>
+<th colspan="2" id="Eccentricity" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+Eccentricity
+</div></th>
+<th rowspan="2" id="blank_1" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col"></th>
+<th colspan="2" id="Area" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+Area
+</div></th>
+<th rowspan="2" id="blank_2" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col"></th>
+<th colspan="2" id="Intensity" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+Intensity
+</div></th>
 </tr>
 <tr class="gt_col_headings even">
-<th id="Nucleus" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Nucleus</th>
-<th id="Cell" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Cell</th>
-<th id="Nucleus" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Nucleus</th>
-<th id="Cell" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Cell</th>
-<th id="Nucleus" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Nucleus</th>
-<th id="Cell" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Cell</th>
+<th id="Nucleus_ecc" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Nucleus</th>
+<th id="Cell_ecc" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Cell</th>
+<th id="Nucleus_area" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Nucleus</th>
+<th id="Cell_area" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Cell</th>
+<th id="Nucleus_mean" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Nucleus</th>
+<th id="Cell_mean" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Cell</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -1037,7 +1040,7 @@ Figure&nbsp;1.4: A simplified version of the convolutional neural network deep l
 
 </div>
 </div>
-<div class="cell-output-display">
+<div class="dark-content">
 <div id="ugaokdwvox" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -1480,25 +1483,51 @@ Figure&nbsp;1.4: A simplified version of the convolutional neural network deep l
 #ugaokdwvox .gt_indent_5 {
   text-indent: 25px;
 }
+
+#ugaokdwvox .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#ugaokdwvox div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
 </style>
 
-<table class="gt_table do-not-create-environment table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
 <thead>
 <tr class="gt_col_headings gt_spanner_row header">
 <th rowspan="2" id="ID" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">ID</th>
-<th colspan="2" id="Eccentricity" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">Eccentricity</span></th>
-<th rowspan="2" id=" " class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col"></th>
-<th colspan="2" id="Area" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">Area</span></th>
-<th rowspan="2" id=" " class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col"></th>
-<th colspan="2" id="Intensity" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">Intensity</span></th>
+<th colspan="2" id="Eccentricity" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+Eccentricity
+</div></th>
+<th rowspan="2" id="blank_1" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col"></th>
+<th colspan="2" id="Area" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+Area
+</div></th>
+<th rowspan="2" id="blank_2" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col"></th>
+<th colspan="2" id="Intensity" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+Intensity
+</div></th>
 </tr>
 <tr class="gt_col_headings even">
-<th id="Nucleus" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Nucleus</th>
-<th id="Cell" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Cell</th>
-<th id="Nucleus" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Nucleus</th>
-<th id="Cell" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Cell</th>
-<th id="Nucleus" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Nucleus</th>
-<th id="Cell" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Cell</th>
+<th id="Nucleus_ecc" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Nucleus</th>
+<th id="Cell_ecc" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Cell</th>
+<th id="Nucleus_area" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Nucleus</th>
+<th id="Cell_area" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Cell</th>
+<th id="Nucleus_mean" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Nucleus</th>
+<th id="Cell_mean" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Cell</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -1552,12 +1581,6 @@ Figure&nbsp;1.4: A simplified version of the convolutional neural network deep l
 </div>
 </div>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-tbl" id="tbl-cells-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a)
-</figcaption>
-</figure>
-</div>
-</div>
 </div><div class="column" style="width:15%;">
 
 </div>
@@ -1569,11 +1592,9 @@ Table&nbsp;1.1: Cells, such as those found in a previous figure, translated into
 </figure>
 </div>
 <p>I just put the next table to see if we get the reference number changing when you go between light/dark (it did not for me).</p>
+<div class="{#tbl-deliveries)">
 <div class="cell" data-layout-align="center" data-renderings="[&quot;light&quot;,&quot;dark&quot;]">
-<div id="tbl-deliveries" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-renderings="[&quot;light&quot;,&quot;dark&quot;]" data-layout-align="center">
-<figure class="quarto-float quarto-float-tbl figure">
-<div aria-describedby="tbl-deliveries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output-display">
+<div class="light-content">
 <div id="juzsjohzxb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#juzsjohzxb table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -2013,22 +2034,33 @@ Table&nbsp;1.1: Cells, such as those found in a previous figure, translated into
 #juzsjohzxb .gt_indent_5 {
   text-indent: 25px;
 }
+
+#juzsjohzxb .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#juzsjohzxb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
 </style>
 
-<table class="gt_table do-not-create-environment cell table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="gt_col_headings gt_spanner_row header">
-<th rowspan="2" id="Time to Delivery" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000" scope="col">Time to Delivery</th>
-<th rowspan="2" id="Hour of Order" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000" scope="col">Hour of Order</th>
-<th rowspan="2" id="Day of Order" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000" scope="col">Day of Order</th>
+<th rowspan="2" id="Time-to-Delivery" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000" scope="col">Time to Delivery</th>
+<th rowspan="2" id="Hour-of-Order" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000" scope="col">Hour of Order</th>
+<th rowspan="2" id="Day-of-Order" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000" scope="col">Day of Order</th>
 <th rowspan="2" id="Distance" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000" scope="col">Distance</th>
-<th colspan="4" id="Item Counts" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">Item Counts</span></th>
+<th colspan="4" id="Item Counts" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+Item Counts
+</div></th>
 </tr>
 <tr class="gt_col_headings even">
-<th id="    1    " class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000" scope="col">1</th>
-<th id="    2    " class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000" scope="col">2</th>
-<th id="..." class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000" scope="col">...</th>
-<th id="    27    " class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000" scope="col">27</th>
+<th id="a-1-" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000" scope="col">1</th>
+<th id="a-2-" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000" scope="col">2</th>
+<th id="blank" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000" scope="col">...</th>
+<th id="a-27-" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000" scope="col">27</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -2117,7 +2149,7 @@ Table&nbsp;1.1: Cells, such as those found in a previous figure, translated into
 
 </div>
 </div>
-<div class="cell-output-display">
+<div class="dark-content">
 <div id="jpxpspehvm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -2560,22 +2592,33 @@ Table&nbsp;1.1: Cells, such as those found in a previous figure, translated into
 #jpxpspehvm .gt_indent_5 {
   text-indent: 25px;
 }
+
+#jpxpspehvm .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#jpxpspehvm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
 </style>
 
-<table class="gt_table do-not-create-environment cell table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="gt_col_headings gt_spanner_row header">
-<th rowspan="2" id="Time to Delivery" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000; color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Time to Delivery</th>
-<th rowspan="2" id="Hour of Order" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000; color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Hour of Order</th>
-<th rowspan="2" id="Day of Order" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000; color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Day of Order</th>
+<th rowspan="2" id="Time-to-Delivery" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000; color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Time to Delivery</th>
+<th rowspan="2" id="Hour-of-Order" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000; color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Hour of Order</th>
+<th rowspan="2" id="Day-of-Order" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000; color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Day of Order</th>
 <th rowspan="2" id="Distance" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000; color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">Distance</th>
-<th colspan="4" id="Item Counts" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">Item Counts</span></th>
+<th colspan="4" id="Item Counts" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+Item Counts
+</div></th>
 </tr>
 <tr class="gt_col_headings even">
-<th id="    1    " class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000; color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">1</th>
-<th id="    2    " class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000; color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">2</th>
-<th id="..." class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000; color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">...</th>
-<th id="    27    " class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000; color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">27</th>
+<th id="a-1-" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000; color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">1</th>
+<th id="a-2-" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000; color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">2</th>
+<th id="blank" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000; color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">...</th>
+<th id="a-27-" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-top-width: 1.8px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1.8px; border-bottom-style: solid; border-bottom-color: #000000; color: #FFFFFF; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">27</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
@@ -2665,11 +2708,7 @@ Table&nbsp;1.1: Cells, such as those found in a previous figure, translated into
 </div>
 </div>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-deliveries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1.2: A random selection of several rows from a tabular data set on food delivery times.
-</figcaption>
-</figure>
-</div>
+<p>A random selection of several rows from a tabular data set on food delivery times.</p>
 </div>
 </section>
 <section id="chapter-references" class="level2 unnumbered">
